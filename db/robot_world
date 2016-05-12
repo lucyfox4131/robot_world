@@ -1,0 +1,43 @@
+---
+robots:
+- id: 2
+  name: Raj
+  city: Dusseldorf
+  state: Germany
+  avatar: as;dlfkj
+  birthdate: 
+  department: Sales
+  date_hired: August 12, 2015
+- id: 3
+  name: name
+  city: city
+  state: state
+  avatar: avatar
+  birthday: birthday
+  department: department
+  date_hired: date_hired
+- id: 4
+  name: name
+  city: city
+  state: state
+  avatar: avatar
+  birthday: birthday
+  department: department
+  date_hired: date_hired
+- id: 5
+  name: name
+  city: city
+  state: state
+  avatar: avatar
+  birthday: birthday
+  department: department
+  date_hired: date_hired
+- id: 6
+  name: name
+  city: city
+  state: state
+  avatar: avatar
+  birthday: birthday
+  department: department
+  date_hired: date_hired
+total: 6
