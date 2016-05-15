@@ -39,7 +39,7 @@ class RobotWorldApp < Sinatra::Base
   end
 
   def robot_world
-    if ENV['RACK_ENV'] == 'test'
+    if ENV['ROBOT_WORLD_ENV'] == 'test'
       database = Sequel.postgres('robot_world_test')
     else
       database = Sequel.postgres('robot_world')
