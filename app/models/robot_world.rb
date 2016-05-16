@@ -37,6 +37,14 @@ class RobotWorld
     locate_robot(id).update(robot)
   end
 
+  def average_age(robots)
+    total = 0
+    robots.each do |robot|
+      total += robot.robot_age
+    end
+    total/robots.length
+  end
+
   def destroy(id)
     locate_robot(id).delete
   end
