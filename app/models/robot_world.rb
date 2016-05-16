@@ -78,9 +78,7 @@ class RobotWorld
     hash = {}
     array.each do |item|
       if hash.has_key?(item)
-        value = hash[item]
-        hash[item] = (value + 1)
-
+        hash[item] = (hash[item] + 1)
       else
         hash[item] = 1
       end
