@@ -1,11 +1,18 @@
 <form action="/robots" method="post">
-  <p>Enter a new robot:</p>
+  <h2>Enter a new robot:</h2>
+  <h4>Name:</h4><br/>
   <input type='text' name='robot[name]' placeholder="name"/><br/>
+  <h4>City:</h4><br/>
   <input type='text' name='robot[city]' placeholder="city"/><br/>
+  <h4>State:</h4><br/>
   <input type='text' name='robot[state]' placeholder="state"/><br/>
+  <h4>Avatar(chose a word to represent your avatar):</h4><br/>
   <input type='text' name='robot[avatar]' placeholder="avatar"/><br/>
-  <input type='text' name='robot[birthday]' placeholder="birthday"/><br/>
-  <input type='text' name='robot[date_hired]' placeholder="date_hired"/><br/>
+  <h4>Birthday:</h4><br/>
+  <input type='date' name='robot[birthday]' placeholder="birthday"/><br/>
+  <h4>Date Hired:</h4><br/>
+  <input type='date' name='robot[date_hired]' placeholder="date_hired"/><br/>
+  <h4>Department:</h4><br/>
   <input type='text' name='robot[department]' placeholder="department"/><br/>
-  <input type="submit" class="btn btn-success" value="Create Robot"/>
+  <input type="submit" class="btn btn-success edit-button" value="CREATE ROBOT"/>
 </form>

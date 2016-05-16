@@ -1,10 +1,11 @@
 require 'pry'
 # RobotWorld model interacting with database
 class RobotWorld
-  attr_reader :database
+  attr_reader :database, :robots
 
   def initialize(database)
     @database = database
+    @robots = all
   end
 
   def table
@@ -35,6 +36,56 @@ class RobotWorld
 
   def update(id, robot)
     locate_robot(id).update(robot)
+  end
+
+  def average_age
+    total = 0
+    robots.each do |robot|
+      total += robot.robot_age
+    end
+    total/(robots.count)
+  end
+
+  def year_hired_all
+    array = robots.map do |robot|
+      robot.hire_year
+    end
+    how_many_of_each(array)
+  end
+
+  def department_all
+    array = robots.map do |robot|
+      robot.department
+    end
+    how_many_of_each(array)
+  end
+
+  def city_all
+    array = robots.map do |robot|
+      robot.city
+    end
+    how_many_of_each(array)
+  end
+
+  def state_all
+    array = robots.map do |robot|
+      robot.state
+    end
+    how_many_of_each(array)
+  end
+
+  def how_many_of_each(array)
+    hash = {}
+    array.each do |item|
+      if hash.has_key?(item)
+        value = hash[item]
+        hash[item] = (value + 1)
+
+      else
+        hash[item] = 1
+      end
+    end
+    hash
   end
 
   def destroy(id)

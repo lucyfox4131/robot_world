@@ -1,12 +1,19 @@
 <form action="/robots/<%= @robot.id %>" method="post">
-  <p>Edit</p>
+  <h2>Edit</h2>
   <input type="hidden" name="_method" value="PUT" />
+  <h4>Name:</h4><br/>
   <input type="text" name="robot[name]" value="<%= @robot.name %>" /><br/>
+  <h4>City:</h4><br/>
   <input type="text" name="robot[city]" value="<%= @robot.city %>" /><br/>
+  <h4>State:</h4><br/>
   <input type="text" name="robot[state]" value="<%= @robot.state %>" /><br/>
+  <h4>Avatar(enter a word to describe your avatar):</h4><br/>
   <input type="text" name="robot[avatar]" value="<%= @robot.avatar %>" /><br/>
-  <input type="text" name="robot[birthday]" value="<%= @robot.birthday %>" /><br/>
-  <input type="text" name="robot[date_hired]" value="<%= @robot.date_hired %>" /><br/>
+  <h4>Birthday:</h4><br/>
+  <input type="date" name="robot[birthday]" value="<%= @robot.birthday %>" /><br/>
+  <h4>Date Hired:</h4><br/>
+  <input type="date" name="robot[date_hired]" value="<%= @robot.date_hired %>" /><br/>
+  <h4>Department:</h4><br/>
   <input type="text" name="robot[department]" value="<%= @robot.department %>" /><br/>
-  <input type='submit' class="btn btn-success" value='SUBMIT CHANGES'>
+  <input type='submit' class="btn btn-success edit-button" value='SUBMIT CHANGES'>
 </form>
