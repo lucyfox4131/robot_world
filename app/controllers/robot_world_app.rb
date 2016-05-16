@@ -1,8 +1,12 @@
 # RobotWorldApp controller
 class RobotWorldApp < Sinatra::Base
   get '/' do
-    @robots = robot_world.all
-    @robot_avg_age = robot_world.average_age(@robots)
+    # @robots = robot_world.all
+    @robot_avg_age = robot_world.average_age
+    @robot_year_hired = robot_world.year_hired_all
+    @robot_department = robot_world.department_all
+    @robot_city = robot_world.city_all
+    @robot_state = robot_world.state_all
     erb :dashboard
   end
 

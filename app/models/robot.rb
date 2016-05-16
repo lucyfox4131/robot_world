@@ -29,6 +29,10 @@ class Robot
     Date.parse(@date_hired)
   end
 
+  def hire_year
+    hire_date_formatted.year
+  end
+
   def robot_age
     bday = birthday_formatted
     if Date.today.month < bday.month

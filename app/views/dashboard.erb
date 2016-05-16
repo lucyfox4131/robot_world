@@ -8,5 +8,30 @@
 <h4><em>Learn All About the Robots that are a part of Robot World below...</em></h4>
 
 <p class="statistics col-md-4 col-sm-8">The average age of robots in robot world is currently <%= @robot_avg_age %>.</p>
-<p class="statistics col-md-4 col-sm-8">THE AVERAGE AGE OF ROBO;asldknf;askdjgb</p>
-<p class="statistics col-md-4 col-sm-8">as;dkjfha;sdlijfhal sjdhfal sjkdhf; askdjbflaskjdbagv;ksj db ;vaksjbdlvajsbd </p>
+<p class="statistics col-md-4 col-sm-8">The years our robots were hired include: <br>
+  <% @robot_year_hired.each do |key, value|%>
+    <%= "#{key}: #{value}"%>
+    <br>
+    <% end%>
+</p>
+
+<p class="statistics col-md-4 col-sm-8">Our Robots work in the following departments: <br>
+  <% @robot_department.each do |key, value|%>
+    <%= "#{key}: #{value}"%>
+    <br>
+    <% end%>
+</p>
+
+<p class="statistics col-md-4 col-sm-8">Our Robots are from these cities: <br>
+  <% @robot_city.each do |key, value|%>
+    <%= "#{key}: #{value}"%>
+    <br>
+    <% end%>
+</p>
+
+<p class="statistics col-md-4 col-sm-8">Our Robots are from these states: <br>
+  <% @robot_state.each do |key, value|%>
+    <%= "#{key}: #{value}"%>
+    <br>
+    <% end%>
+</p>
