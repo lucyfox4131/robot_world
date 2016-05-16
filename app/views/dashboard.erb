@@ -12,33 +12,67 @@
   </div>
 </div>
 
-<div>
-  <p class="statistics col-md-4 col-sm-8">The average age of robots in robot world is currently <%= @robot_avg_age %>.</p>
-  <p class="statistics col-md-4 col-sm-8">The years our robots were hired include: <br>
-    <% @robot_year_hired.each do |key, value|%>
-    <%= "#{key}: #{value}"%>
-    <br>
-    <% end%>
-  </p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Average Robot Age</h3>
+  </div>
+  <div class="panel-body">
+    <p>The average age of robots in robot world is currently <%= @robot_avg_age %>.</p>
+  </div>
+</div>
 
-  <p class="statistics col-md-4 col-sm-8">Our Robots work in the following departments: <br>
-    <% @robot_department.each do |key, value|%>
-    <%= "#{key}: #{value}"%>
-    <br>
-    <% end%>
-  </p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Years Hired</h3>
+  </div>
+  <div class="panel-body">
+    <p>The years our robots were hired include: <br>
+      <% @robot_year_hired.each do |key, value|%>
+      <%= "#{value} in #{key}"%>
+      <br>
+      <% end%>
+    </p>
+  </div>
+</div>
 
-  <p class="statistics col-md-4 col-sm-8">Our Robots are from these cities: <br>
-    <% @robot_city.each do |key, value|%>
-    <%= "#{key}: #{value}"%>
-    <br>
-    <% end%>
-  </p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Departments</h3>
+  </div>
+  <div class="panel-body">
+    <p>Our Robots work in the following departments: <br>
+      <% @robot_department.each do |key, value|%>
+      <%= "#{value} in #{key}"%>
+      <br>
+      <% end%>
+    </p>
+  </div>
+</div>
 
-  <p class="statistics col-md-4 col-sm-8">Our Robots are from these states: <br>
-    <% @robot_state.each do |key, value|%>
-    <%= "#{key}: #{value}"%>
-    <br>
-    <% end%>
-  </p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Cities Represented</h3>
+  </div>
+  <div class="panel-body">
+    <p>Our Robots are from these cities: <br>
+      <% @robot_city.each do |key, value|%>
+      <%= "#{value} from #{key}"%>
+      <br>
+      <% end%>
+    </p>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">States Represented</h3>
+  </div>
+  <div class="panel-body">
+    <p>Our Robots are from these states: <br>
+      <% @robot_state.each do |key, value|%>
+      <%= "#{value} from #{key}"%>
+      <br>
+      <% end%>
+    </p>
+  </div>
 </div>
